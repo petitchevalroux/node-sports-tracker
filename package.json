@@ -1,5 +1,5 @@
 {
-  "name": "petitchevalroux/sports-tracker-client",
+  "name": "@petitchevalroux/sports-tracker-client",
   "version": "1.0.0",
   "description": "Unofficial Sports-tracker.com api client",
   "scripts": {
