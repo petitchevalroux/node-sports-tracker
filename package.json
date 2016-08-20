@@ -1,20 +1,20 @@
 {
-  "name": "node-project",
+  "name": "petitchevalroux/sports-tracker-client",
   "version": "1.0.0",
-  "description": "Empty node project",
+  "description": "Unofficial Sports-tracker.com api client",
   "scripts": {
     "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://github.com/petitchevalroux/node-project.git"
+    "url": "git+ssh://github.com/petitchevalroux/sports-tracker-client.git"
   },
   "author": "Patrick Poulain",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/petitchevalroux/node-project/issues"
+    "url": "https://github.com/petitchevalroux/sports-tracker-client/issues"
   },
-  "homepage": "https://github.com/petitchevalroux/node-project#readme",
+  "homepage": "https://github.com/petitchevalroux/sports-tracker-client#readme",
   "devDependencies": {
     "eslint": "^3.3.1",
     "eslint-plugin-promise": "^2.0.1",
