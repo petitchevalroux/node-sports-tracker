@@ -73,7 +73,18 @@ Client.prototype.get = function(path) {
         .then(function(request) {
             return request.get(path);
         })
-        .then(JSON.parse);
+        .then(JSON.parse)
+        .then(function(answer) {
+            return new Promise(function(resolve, reject) {
+                if (!answer.payload) {
+                    reject(new Error("No payload"));
+                } else if (answer.error) {
+                    reject(new Error(answer.error));
+                } else {
+                    resolve(answer);
+                }
+            });
+        });
 };
 
 module.exports = Client;
