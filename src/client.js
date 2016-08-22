@@ -20,6 +20,7 @@ Client.prototype.getRequest = function() {
             self.request = request.defaults({
                 "baseUrl": "http://www.sports-tracker.com/apiserver/v1/"
             });
+            //require("request-debug")(self.request);
         }
         resolve(self.request);
     });
@@ -32,7 +33,7 @@ Client.prototype.getRequest = function() {
 Client.prototype.getAuthenticatedRequest = function() {
     var self = this;
     if (self.authenticatedRequest) {
-        return new Promise.then(function(resolve) {
+        return new Promise(function(resolve) {
             resolve(self.authenticatedRequest);
         });
     }
@@ -77,13 +78,22 @@ Client.prototype.get = function(path) {
         .then(function(answer) {
             return new Promise(function(resolve, reject) {
                 if (!answer.payload) {
-                    reject(new Error("No payload"));
+                    reject(new Error("No payload (answer:" +
+                        JSON.stringify(answer) + ")"));
                 } else if (answer.error) {
                     reject(new Error(answer.error));
                 } else {
                     resolve(answer);
                 }
             });
+        });
+};
+
+Client.prototype.getWorkouts = function(offset, limit) {
+    return this.get("workouts?limited=true&offset=" + offset + "&limit=" +
+            limit)
+        .then(function(answer) {
+            return answer.payload;
         });
 };
 
