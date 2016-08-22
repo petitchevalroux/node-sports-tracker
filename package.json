@@ -21,6 +21,7 @@
     "istanbul": "^0.4.4",
     "js-beautify": "^1.6.3",
     "mocha": "^3.0.2",
+    "request-debug": "^0.2.0",
     "sinon": "^1.17.5"
   },
   "dependencies": {
