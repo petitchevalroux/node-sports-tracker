@@ -1,7 +1,6 @@
 # Unofficial Sports-tracker.com api client
 ##Todo
 * Write client documentation
-* Publish package
 
 ## Workouts stream
 Readable objectMode stream which read all workouts from [sport-trackers.com](http://www.sports-tracker.com/)
