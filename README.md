@@ -8,7 +8,7 @@ Readable objectMode stream which read all workouts from [sport-trackers.com](htt
 ### Usage
 ```javascript
 var WorkoutsStream = require("@petitchevalroux/sports-tracker-client").WorkoutsStream;
-var wStream = new Stream({
+var wStream = new WorkoutsStream({
     "user": "user@example.com",
     "password": "str0ngP4ssw0rd"
 });
